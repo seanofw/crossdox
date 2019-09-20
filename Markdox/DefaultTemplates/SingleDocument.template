@@ -1,0 +1,10 @@
+﻿# {RootNamespace}
+
+%foreach (TypeDoc type in Types) {
+	-------------------------------------------------------------------------------
+
+	## {type.Name}
+
+	%include "Type.template"
+
+%}

@@ -1,0 +1,7 @@
+﻿# {Namespace.Name}
+
+**Types in {Namespace.Name}:**
+
+%foreach (TypeDoc type in Namespace) {
+- [{type.Name.NameWithParameters}]({type.Name}.md)
+%}

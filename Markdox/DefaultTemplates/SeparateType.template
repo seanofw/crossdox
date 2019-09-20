@@ -1,0 +1,5 @@
+﻿# {Type.Name.Name}
+
+_Namespace: [{Type.Name.Container}]({Type.Name.Container}.md)_
+
+%include "Type.template"

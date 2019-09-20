@@ -1,0 +1,53 @@
+﻿%if (type.Meta != null) {
+	%if (!string.IsNullOrEmpty(type.Meta.Summary)) {
+		{type.Meta?.Summary}
+
+	%}
+	%if (!string.IsNullOrEmpty(type.Meta.Remarks)) {
+		### Details
+
+		{type.Meta.Remarks}
+
+	%}
+	%if (!string.IsNullOrEmpty(type.Meta.Example)) {
+		### Example
+
+		{type.Meta.Example}
+
+	%}
+%}
+
+### Quick Reference
+
+%if (type.Fields.Any()) {
+	**Fields**
+
+	%foreach (FieldDoc field in type.Fields.Values.OrderBy(f => f.Name.Name)) {
+		- {field.Name.Name}
+	%}
+
+%}
+%if (type.Properties.Any()) {
+	**Properties**
+
+	%foreach (PropertyDoc property in type.Properties.Values.OrderBy(p => p.Name.Name)) {
+		- {property.Name.Name}
+	%}
+
+%}
+%if (type.Events.Any()) {
+	**Events**
+
+	%foreach (EventDoc @event in type.Events.Values.OrderBy(e => e.Name.Name)) {
+		- {@event.Name.Name}
+	%}
+
+%}
+%if (type.Methods.Any()) {
+	**Methods**
+
+	%foreach (MethodDoc method in type.Methods.Values.OrderBy(m => m.Name.Name)) {
+		- {method.ShortName}
+	%}
+
+%}

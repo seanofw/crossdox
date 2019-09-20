@@ -1,0 +1,7 @@
+﻿# {RootNamespace}
+
+## Namespaces
+
+%foreach (NameInfo nameInfo in Namespaces) {
+- [{nameInfo}]({nameInfo}.md)
+%}
