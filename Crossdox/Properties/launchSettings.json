@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Crossdox": {
+      "commandName": "Project",
+      "commandLineArgs": "Z:\\Dropbox\\prog\\BalancedCollections\\BalancedCollections\\bin\\Debug\\BalancedCollections.dll"
+    }
+  }
+}
